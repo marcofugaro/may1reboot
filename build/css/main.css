@@ -1,0 +1,74 @@
+body {
+  margin: 0; }
+
+body.three-grab #three-container {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab; }
+
+body.three-grabbing #three-container {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing; }
+
+.globe {
+  overflow: hidden;
+  background: #0f0f0f;
+  width: 100vw;
+  height: 100vh;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.webgl-error {
+  display: none; }
+
+.globe.error #three-container {
+  background-image: url(../res/img/globe_fallback.jpg);
+  background-size: cover;
+  background-position: center; }
+
+.globe.error .webgl-error {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #d40c05; }
+
+#three-container {
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+  #three-container canvas {
+    opacity: 0; }
+
+#preloader {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  text-align: center; }
+
+.loader-txt {
+  color: #d40c05;
+  font-size: 12px;
+  margin-top: 16px; }
+
+.loader-img {
+  width: 36px;
+  margin-left: -18px;
+  position: absolute;
+  top: -28px;
+  animation: spin 1s infinite linear; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.dg.ac * {
+  box-sizing: content-box !important; }
